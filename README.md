@@ -19,7 +19,7 @@
 #### How to Use:
 1. **Clone the repository** to your local environment.
    ```bash
-   git clone https://github.com/username/PonkeWifHat.git
+   git clone https://github.com/ShubhamChoudharyShubh/PonkeWifHat
    ```
 2. Open the `index.html` file in your browser to view the frontend.
 
@@ -29,18 +29,3 @@
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **Solana Blockchain (for backend integration)**
-
----
-
-#### SEO & Best Practices:
-- **SEO-friendly title and meta descriptions** for search engine ranking.
-- **Optimized for mobile** with responsive CSS.
-- **Fast loading** with minimal scripts and lightweight assets.
-
----
-
-#### License:
-MIT License
-
-Feel free to customize and use this project for your own crypto airdrop campaigns!
