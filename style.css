@@ -6,6 +6,273 @@
     box-sizing: border-box;
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Example of handwritten-like font */
 }
+/* styles.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Example of handwritten-like font */
+}
+
+/* First Section Styles */
+.first-section {
+    background-color: rgb(237, 182, 35);
+    padding: 30px 0;
+    height: 100vh;
+    position: relative; /* Add position relative to allow absolute positioning */
+}
+
+/* Container Styles */
+.container-heading,
+.container-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Heading Styles */
+.heading {
+    text-align: center;
+    width: 100%;
+}
+
+.heading h1 {
+    font-size: 90px;
+    margin-bottom: 0px;
+}
+
+.heading h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Sub-container Styles */
+.left-sub-container,
+.right-sub-container {
+    transform: translateY(-20px);
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-sub-container img {
+   
+    width: 100%;
+    height: auto;
+    align-self: flex-end; /* Align the image to the bottom */
+}
+
+
+.right-sub-container {
+    position: relative;
+}
+
+/* About Styles */
+.about h3 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: -20px; 
+    top: 20px;
+}
+
+.about h3 .highlight {
+    color: rgb(237, 59, 35);
+}
+
+/* Button and Social Icons Styles */
+.button-container {
+    size: 20px;
+    position: absolute;
+    bottom: -80px;
+    left: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    transform: rotate(3deg);
+}
+
+.button-container .button,
+.button-container .social-icons {
+    margin-right: 40px; /* Add margin between the button and social icons */
+}
+
+.button a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 30px;
+    background-color: rgb(237, 59, 35);
+    color: #fff;
+    text-decoration: none;
+    border: 5px solid black;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.button a:hover {
+    background-color: rgb(237, 59, 35);
+}
+
+.social-icons {
+    display: flex;
+    transform: rotate(-20deg);
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+}
+
+.scrolling-text-container {
+    position: relative;
+    height: 50px; /* Adjust height as needed */
+    background-color: #EBC78D;
+    border-top: 5px solid black; /* Border on upper side */
+    overflow: hidden; /* Hide overflow */
+}
+
+.scrolling-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    color: black;
+    animation: scrollText 20s linear infinite; /* Adjust speed as needed */
+    width: 200%; /* Ensure enough width to accommodate the duplicated text */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-50%); /* End position */
+    }
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Gap between grid items */
+}
+
+.grid-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.grid-item img {
+    width: 100%; /* Ensures the image takes up 100% of its parent's width */
+    height: auto; /* Allows the image's height to adjust proportionally */
+    max-width: 200px; /* Set maximum width for equal sizes */
+    max-height: 100px; /* Set maximum height for equal sizes */
+    border: 2px solid white;
+    padding: 30px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-container {
+        grid-template-columns: 1fr; /* 1 column on even smaller screens */
+    }
+}
+
+
+
+.tokenomics-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.tokenomics-buttons > div {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: rgb(0, 0, 0);
+    background: rgb(237, 182, 35);
+    text-align: center;
+    padding: 10px 20px;
+    margin-left: auto; /* Pushes the second button to the right */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tokenomics-buttons > div:last-child {
+    margin-left: 20px; /* Add margin between buttons */
+}
+.scrolling-grid-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 160px; /* Adjust height as needed */
+    background-color: black;
+    border-top: 5px solid black; /* Border on upper side */
+}
+
+.scrolling-grid {
+    position: absolute;
+    display: flex; /* Use flex to align items horizontally */
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    color: black;
+}
+
+/* Left-to-right scrolling (first scrolling grid) */
+@keyframes scrollTextLTR {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* End off-screen to the right */
+    }
+}
+
+/* Right-to-left scrolling (second scrolling grid) */
+@keyframes scrollTextRTL {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
+}
+
+#scrollingGrid1 {
+    animation: scrollTextLTR 20s linear infinite; /* Left-to-right scrolling */
+}
+
+#scrollingGrid2 {
+    animation: scrollTextRTL 20s linear infinite; /* Right-to-left scrolling */
+}
+
+#scrollingGrid3 {
+    animation: scrollTextLTR 20s linear infinite; /* Left-to-right scrolling */
+}
+.grid-item {
+    display: inline-block;
+    margin: 10px; /* Add some margin between items */
+    min-width: 150px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
 
 /* First Section Styles */
 .first-section {
